@@ -38,7 +38,7 @@ let clickChangeFruit = true;
 let adLink = false;
 
 // 修改网页标题：将 "合成大西瓜" 进行替换
-document.getElementsByTagName("title")[0].innerText = '合成大西瓜';
+document.getElementsByTagName("title")[0].innerText = '合成大家庭';
 
 // 开启选分弹窗：将 false 改为 true
 let selectModal = false;

@@ -1,12 +1,12 @@
 /**
- * 选分弹窗
+ * 選分彈窗
  * @type {number}
  */
 
 if (selectModal) {
   let extraScoreStr = '';
   while (isNaN(parseInt(extraScoreStr))) {
-    extraScoreStr = prompt('请输入分数加成数字', '1').trim();
+    extraScoreStr = prompt('請輸入分數加成數字', '1').trim();
   }
   extraScore = parseInt(extraScoreStr)
 }
@@ -1157,7 +1157,7 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start(),
             this.lineNode.children[0].active = !1,
             this.fruitS = ["PuTaoS", "YingTaoS", "JuZiS", "NingMengS", "MiHouTaoS", "XiHongShiS", "TaoS", "BoLuoS", "YeZiS", "XiGuaS"],
-            this.createOneFruit(firstFruit) // 第一个水果
+            this.createOneFruit(firstFruit) // 第一個人物
         }, t.prototype.update = function (e) {
           a.default.GameUpdateCtrl, this.lineNode.children[0].y - n.Instance.fruitHeigth < 100 && this.lineNode.children[0].y - n.Instance.fruitHeigth >= 0 && (this.lineNode.children[0].active = !0), this.lineNode.children[0].y - n.Instance.fruitHeigth > 100 && (this.lineNode.children[0].active = !1)
         }, t.prototype.end = function () {

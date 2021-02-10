@@ -34,7 +34,7 @@ let clickChangeFruit = true;
 let adLink = false;
 
 // 修改網頁標題：將 "合成大西瓜" 進行替換
-document.getElementsByTagName("title")[0].innerText = '合成大家庭';
+document.getElementsByTagName("title")[0].innerText = '合成怪獸家族';
 
 // 開啟選分彈窗：將 false 改為 ture
 let selectModal = false;

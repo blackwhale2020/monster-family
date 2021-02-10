@@ -1196,7 +1196,7 @@ window.__require = function e(t, n, o) {
           }
           return e
         },
-          // 生成水果
+          // 生成人物
           t.prototype.createOneFruit = function (e) {
             var t = this, n = cc.instantiate(this.fruitPre);
             n.parent = this.lineNode;
@@ -1212,7 +1212,7 @@ window.__require = function e(t, n, o) {
             }
             n.getComponent(cc.RigidBody).active = false;
             n.getComponent(cc.PhysicsCircleCollider).radius = 0;
-            // 让说过更 Q 弹
+            // 讓人物更Q彈
             if (fruitQTan) {
               n.getComponent(cc.PhysicsCircleCollider).restitution = fruitQTan;
             }
@@ -1606,7 +1606,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.onTouchEnd = function (e) {
           var t = this;
           i.default.playerTouch && null != a.default.Instance.targetFruit && 1 == this.touchNum && (this.touchNum = 0, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).radius = a.default.Instance.targetFruit.height / 2, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).apply(), a.default.Instance.targetFruit.getComponent(cc.RigidBody).active = true,a.default.Instance.targetFruit.getComponent(cc.RigidBody).type = cc.RigidBodyType.Dynamic, a.default.Instance.targetFruit.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -800), a.default.Instance.targetFruit = null,
-            // 生成指定水果
+            // 生成指定人物
             this.scheduleOnce(function () {
               if (setFruits) {
                 let {startFruits} =  setFruits;
@@ -3476,7 +3476,7 @@ window.__require = function e(t, n, o) {
           && this.endCtrl
           && 0 == this.endOne
           && this.testEndDJS > 3
-          && wuDi) { // 无敌模式
+          && wuDi) { // 無敵模式
             a.default.GameUpdateCtrl = !1, a.default.playerTouch = !1;
             for (var n = 0; n < cc.find("Canvas/fruitNode").children.length; n++) cc.find("Canvas/fruitNode").children[n].removeComponent(cc.PhysicsCircleCollider), cc.find("Canvas/fruitNode").children[n].removeComponent(cc.RigidBody);
             this.node.color = cc.Color.RED, cc.tween(this.node).to(.3, {
@@ -3498,11 +3498,11 @@ window.__require = function e(t, n, o) {
             t.node.parent = cc.find("Canvas/fruitNode"), i.default.Instance.fruitHeigth = i.default.Instance.findHighestFruit(), null != t.node.getComponent(cc.RigidBody) && (t.node.getComponent(cc.RigidBody).angularVelocity = 0);
             var c = this.fruitNumber,
               r = n.node.getComponent("fruitData").fruitNumber;
-            // 控制合成水果的边界值
+            // 控制合成人物的邊界值
             var border = reverseLevelUp ? 1 : 9;
-            // 控制合成水果后的升级逻辑
+            // 控制合成人物後的升級邏輯
             var fruitVolume = reverseLevelUp ? -1 : 1;
-            // 合成水果，水果下标 0-9 (0 为葡萄，9 为半个西瓜，有一些特殊逻辑)
+            // 合成人物，人物下標 0-9 (0 為小米，9 為劉啟揚，有一些特殊邏輯)
             c == r && (reverseLevelUp ? (c > border && r > border) : (c < border && r < border)) ? (this.pengzhuangCount += 1,
               0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + (extraScore ? extraScore : 1), // 改分数
                 u.default.Instance.SetScoreTween(a.default.score),
@@ -3517,7 +3517,7 @@ window.__require = function e(t, n, o) {
                     i.default.Instance.createLevelUpFruit(o.fruitNumber + fruitVolume, n.node.position),
                     n.node.active = !1, t.node.active = !1, n.node.destroy(), t.node.destroy()
                 }).start())) :
-              c == r && border == c && border == r && // 边界逻辑
+              c == r && border == c && border == r && // 邊界邏輯
               (this.pengzhuangCount += 1,
               0 == t.node.getComponent("fruitData").getNumber() && (a.default.score += this.fruitNumber + (extraScore ? extraScore : 1), // 改分数
                 u.default.Instance.SetScoreTween(a.default.score),
@@ -3530,7 +3530,7 @@ window.__require = function e(t, n, o) {
               }).call(function () {
                 i.default.Instance.createFruitSui(o.fruitNumber, n.node.position),
                   i.default.Instance.createFruitL(o.fruitNumber, n.node.position, n.node.width),
-                  // +1 变 -1
+                  // +1 變 -1
                   i.default.Instance.createLevelUpFruit(o.fruitNumber + fruitVolume, n.node.position);
                 var e = cc.find("Canvas/upEffectParent").getChildByName("daxigua");
                 e.active = !0, e.opacity = 0, cc.tween(e).to(.5, {
